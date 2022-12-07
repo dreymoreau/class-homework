@@ -74,3 +74,5 @@ const account = {
 
   console.log(`owner: ${account.name}, balance ${account.balance}`)
   //  output => owner: Alex, balance 170
+
+  
