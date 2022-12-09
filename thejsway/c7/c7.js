@@ -29,3 +29,22 @@ musketeers.forEach(elem => {
   for(const musketeer of musketeers){
     console.log(musketeers)
   }
+
+  // Write a program that creates the following array, then calculates and shows the sum of its values (42 in that case).
+// declare sum variable
+// iterate through with a for loop and add each element together by the index, to sum
+// console.log sum
+const values1 = [3, 11, 7, 2, 9, 10];
+let sum = 0;
+for(let i = 0; i < values1.length; i++){
+         sum += values1[i]
+}
+
+console.log(sum)
+
+// Write a program that creates the following array, then calculates and shows the array's maximum value.
+const values2 = [3, 11, 7, 2, 9, 10];
+
+for(let i = 0; i < values2.length; i++){
+    console.log(Math.max(...values2))
+}
