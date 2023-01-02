@@ -20,8 +20,7 @@ console.log( arr ); // 8, 5, 2, 1, -10
 
 function copySorted(arr) {
     let sortedArr = arr.sort((a,b) => a.localeCompare(b))
-   return sortedArr
-    
+    return sortedArr
 }
 
 console.log(copySorted(["HTML", "JavaScript", "CSS"]))
