@@ -24,3 +24,20 @@ function copySorted(arr) {
 }
 
 console.log(copySorted(["HTML", "JavaScript", "CSS"]))
+
+// Map to names
+// importance: 5
+// You have an array of user objects, each one has user.name. Write the code that converts it into an array of names.
+
+// For instance:
+
+let john = { name: "John", age: 25 };
+let pete = { name: "Pete", age: 30 };
+let mary = { name: "Mary", age: 28 };
+
+let users = [ john, pete, mary ];
+
+//map through and assign an item argument to each name, thus creating a new array solely of the names
+let names = users.map(item => item.name)
+
+console.log(names)
