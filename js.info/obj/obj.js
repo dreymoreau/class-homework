@@ -14,7 +14,32 @@ user.name = "John"
 user.surname = "Smith"
 user.name = "Pete"
 delete user.name
+ 
+// Task 2
 
+// Check for emptiness
+// importance: 5
+// Write the function isEmpty(obj) which returns true if the object has no properties, false otherwise.
+
+// Should work like that:
+
+//use for ... in loop
+// check if there are properties inside of the object, return false right away if there is
+//if not return true
+
+let schedule = {};
+
+function isEmpty(obj) {
+    for (let key in obj){
+        return false
+    }
+    return true
+}
+console.log(isEmpty(schedule)); // true
+
+schedule["8:30"] = "get up";
+
+console.log( isEmpty(schedule) ); // false
 
 // Task 3
 
