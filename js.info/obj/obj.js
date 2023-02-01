@@ -68,3 +68,26 @@ let salaries = {
      }
   }
   console.log(sum)
+
+  // Task 4
+
+  // Create a function multiplyNumeric(obj) that multiplies all numeric property values of obj by 2.
+
+  //declare function  
+  //use for...in loop using the obj parameter
+  // check if obj[key] is a number, if it is multiply it by 2
+
+  let menu = {
+    width: 200,
+    height: 300,
+    title: "My menu"
+  };
+  
+  function multiplyNumeric(obj){
+      for(let key in obj) {
+          if(typeof obj[key] == 'number'){
+             console.log(obj[key] *= 2)
+      }
+    }
+  }
+  multiplyNumeric(menu)
