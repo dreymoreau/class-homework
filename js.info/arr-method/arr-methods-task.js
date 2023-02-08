@@ -41,3 +41,37 @@ let users = [ john, pete, mary ];
 let names = users.map(item => item.name)
 
 console.log(names)
+
+// **Translate border-left-width to borderLeftWidth***
+
+
+// Write the function camelize(str) that changes dash-separated words like “my-short-string” into camel-cased “myShortString”.
+
+// That is: removes all dashes, each word after dash becomes uppercased.
+
+// Examples:
+
+// split str removing the dashes
+// newString = newString.map
+// declare word and index parameters
+// check to see if the index is 0 then return it toLowerCase()
+// else return word[0] => which is the first letter of each element in the array toUpperCase() + word.slice(1), this will have the starting position be the second letter and since there isn't a second argument it will include the rest of the word
+// join('') the array back together
+// return newString
+
+function camelize(str) {
+    let newString = str.split('-')
+    newString = newString.map(
+        function(word, index) {
+        if(index == 0) {
+            return word.toLowerCase()
+        } else {
+           return word[0].toUpperCase() + word.slice(1)
+        }
+    })
+    newString = newString.join('')
+    return newString
+}
+
+
+console.log(camelize('one-long-word')) //output => oneLongWord
