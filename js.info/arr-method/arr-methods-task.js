@@ -82,7 +82,7 @@ console.log(camelize('one-long-word')) //output => oneLongWord
 
 //directly return using filter, compare if item is greater or equals to a or if item is less than or equals to b
 
-arr1 = [5, 3, 8, 1];
+let arr1 = [5, 3, 8, 1];
 
 function filterRange(arr1, a, b) {
     return arr1.filter(item => (a <= item && item <= b))
