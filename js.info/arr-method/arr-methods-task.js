@@ -82,12 +82,39 @@ console.log(camelize('one-long-word')) //output => oneLongWord
 
 //directly return using filter, compare if item is greater or equals to a or if item is less than or equals to b
 
-arr = [5, 3, 8, 1];
+arr1 = [5, 3, 8, 1];
 
-function filterRange(arr, a, b) {
-    return arr.filter(item => (a <= item && item <= b))
+function filterRange(arr1, a, b) {
+    return arr1.filter(item => (a <= item && item <= b))
 }
 
-let filtered = filterRange(arr, 1, 4);
+let filtered = filterRange(arr1, 1, 4);
 console.log(filtered); // 3,1 (matching values)
-console.log(arr); // 5,3,8,1 (not modified)
+console.log(arr1); // 5,3,8,1 (not modified)
+
+
+// Filter range "in place"
+// importance: 4
+// Write a function filterRangeInPlace(arr, a, b) that gets an array arr and removes from it all values except those that are between a and b. The test is: a ≤ arr[i] ≤ b.
+
+// The function should only modify the array. It should not return anything.
+
+// For instance:
+
+// declare function
+// loop through
+// if arr[i] is less than a or arr [i] is greater than b, splice i
+// add i-- after, this is important because while the loop is iterating through it will skip over certain elements without it
+// return arr
+
+arr = [5, 3, 8, 1];
+function filterRangeInPlace(arr, a, b) {
+    for(let i = 0; i < arr.length; i++){
+        if(a > arr[i] || b < arr[i]) {
+            arr.splice(i,1)
+            i--
+        }
+    }
+    return arr
+}
+console.log(filterRangeInPlace(arr, 1, 4)) // => output [3,1]
