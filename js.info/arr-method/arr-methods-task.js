@@ -118,3 +118,28 @@ function filterRangeInPlace(arr, a, b) {
     return arr
 }
 console.log(filterRangeInPlace(arr, 1, 4)) // => output [3,1]
+
+// Map to objects
+// importance: 5
+// You have an array of user objects, each one has name, surname and id.
+
+// Write the code to create another array from it, of objects with id and fullName, where fullName is generated from name and surname.
+
+// For instance:
+
+// let john = { name: "John", surname: "Smith", id: 1 };
+// let pete = { name: "Pete", surname: "Hunt", id: 2 };
+// let mary = { name: "Mary", surname: "Key", id: 3 };
+
+
+let usersMapped = [
+  { fullName: "John Smith", id: 1 },
+  { fullName: "Pete Hunt", id: 2 },
+  { fullName: "Mary Key", id: 3 }
+]
+
+let usersMap = usersMapped.map(x => x)
+
+
+console.log(usersMap[0].id) // 1
+console.log(usersMap[0].fullName) // John Smith
