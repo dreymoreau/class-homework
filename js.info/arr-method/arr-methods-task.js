@@ -165,3 +165,19 @@ sortByAge(arr);
 console.log(arr[0].name); // John
 console.log(arr[1].name); // Mary
 console.log(arr[2].name); // Pete
+
+// Shuffle an array
+// importance: 3
+// Write the function shuffle(array) that shuffles (randomly reorders) elements of the array.
+
+// Multiple runs of shuffle may lead to different orders of elements. For instance:
+
+// declare function
+// directly return using array.sort and Math.random() - 0.5 because it is a random number either positive or negative, so the sorting function will redistribute the numbers inside of the array randomly 
+
+let arr3 = [1, 2, 3];
+
+function shuffle(array) {
+   return array.sort(() => Math.random() - 0.5)
+}
+console.log(shuffle(arr3)) // arr = [3, 2, 1]
