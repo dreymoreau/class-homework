@@ -36,3 +36,4 @@ console.log(`Look, a cat! ${snowy.name} barks: ${snowy.bark()}`);
 // output
 //Snowy is a terrier dog measuring 22
 //Look, a cat! Snowy barks: Woof! Woof!
+

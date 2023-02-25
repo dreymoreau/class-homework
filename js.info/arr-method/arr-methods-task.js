@@ -181,3 +181,26 @@ function shuffle(array) {
    return array.sort(() => Math.random() - 0.5)
 }
 console.log(shuffle(arr3)) // arr = [3, 2, 1]
+
+// Get average age
+// importance: 4
+// Write the function getAverageAge(users) that gets an array of objects with property age and returns the average age.
+
+// The formula for the average is (age1 + age2 + ... + ageN) / N.
+
+// For instance:
+
+let john2 = { name: "John", age: 25 };
+let pete2 = { name: "Pete", age: 30 };
+let mary2 = { name: "Mary", age: 29 };
+
+arr3 = [ john2, pete2, mary2 ];
+
+// directly return using reduce method
+// prev + user.age (to add up the total ages together) 
+//also using the second argument set to 0 so the count starts at 0
+// divide the total sum by users.length (3)
+function getAverageAge(users) {
+    return users.reduce((prev,user) => prev + user.age, 0) / users.length
+}
+console.log(getAverageAge(arr3)); // (25 + 30 + 29) / 3 = 28
