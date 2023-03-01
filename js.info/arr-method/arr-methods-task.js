@@ -204,3 +204,33 @@ function getAverageAge(users) {
     return users.reduce((prev,user) => prev + user.age, 0) / users.length
 }
 console.log(getAverageAge(arr3)); // (25 + 30 + 29) / 3 = 28
+
+// Filter unique array members
+// importance: 4
+// Let arr be an array.
+
+// Create a function unique(arr) that should return an array with unique items of arr.
+
+// For instance:
+
+// declare empty array
+// use for of loop
+// use if statement
+// push unique values into empty array
+//return array
+
+function unique(arr) {
+    let uniques = []
+    for(let unique of arr) {
+        if(!uniques.includes(unique)){
+            uniques.push(unique)
+        }
+    }
+    return uniques
+}
+
+let strings = ["Hare", "Krishna", "Hare", "Krishna",
+  "Krishna", "Krishna", "Hare", "Hare", ":-O"
+];
+
+console.log(unique(strings)); // => output [ 'Hare', 'Krishna', ':-O' ]
