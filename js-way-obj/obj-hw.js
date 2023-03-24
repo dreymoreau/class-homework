@@ -37,3 +37,40 @@ console.log(`Look, a cat! ${snowy.name} barks: ${snowy.bark()}`);
 //Snowy is a terrier dog measuring 22
 //Look, a cat! Snowy barks: Woof! Woof!
 
+
+// Account List
+
+// Let's build upon a previous account object exercise. A bank account is still defined by:
+
+// A name property.
+// A balance property, initially set to 0.
+// A credit method adding the value passed as an argument to the account balance.
+// A describe method returning the account description.
+
+// Write a program that creates three accounts: one belonging to Sean, another to Brad and the third one to Georges. 
+// These accounts are stored in an array. Next, the program credits 1000 to each account and shows its description
+
+class BankAccount {
+    constructor(name,balance){
+        this.name = name
+        this.balance = balance
+    }
+    
+    credit(balance){
+        return this.balance
+    }
+    
+    describe(){
+        console.log(`owner: ${this.name}, balance: ${this.balance}`)
+    }
+}
+
+let sean = new BankAccount('Sean', 1000)
+let brad = new BankAccount('Brad', 1000)
+let georges = new BankAccount('Georges',1000)
+
+console.log(sean)
+console.log(brad)
+console.log(georges)
+let allUsers = [sean, brad, georges]
+console.log(allUsers)
